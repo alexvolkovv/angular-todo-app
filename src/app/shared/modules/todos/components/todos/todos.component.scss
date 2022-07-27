@@ -1,0 +1,45 @@
+.todos {
+  padding: 50px;
+  width: 100%;
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    color: #64C4ED;
+    border-bottom: 2px solid #F2F2F2;
+    padding-bottom: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+}
+
+.todo__items {
+  width: 100%;
+}
+
+.todos__add {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  color: #B4B4B4;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.no-tasks {
+  text-align: center;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #C9D1D3;
+}
+
+
+

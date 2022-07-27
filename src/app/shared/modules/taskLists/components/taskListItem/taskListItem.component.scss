@@ -1,0 +1,61 @@
+.list__item {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.2s all;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 5px;
+  &.active {
+    background-color: #fff;
+  }
+
+  &:hover {
+    background-color: #fff;
+    &-remove {
+      display: block;
+    }
+  }
+
+  &:hover .list__item-remove {
+    display: block;
+  }
+
+  &-remove {
+    width: 12px;
+    display: none;
+    &:hover {
+      svg {
+        path {
+          fill: darken(#E3E3E3,15%);
+        }
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill: darken(#E3E3E3,25%);
+        }
+      }
+    }
+    svg {
+      transition: 0.2s all;
+      width: 100%;
+    }
+  }
+
+
+
+  &-badge {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    margin-right: 10px;
+    &.round {
+      border-radius: 50%;
+    }
+  }
+}

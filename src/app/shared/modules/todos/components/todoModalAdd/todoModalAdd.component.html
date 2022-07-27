@@ -1,0 +1,9 @@
+<form class='modal' #root (ngSubmit)='addTask()' [formGroup]='form'>
+  <input #input type='text' placeholder='Название задачи' formControlName='taskName'>
+
+  <div class='modal__actions'>
+    <button class='submit' type='submit'>Добавить</button>
+    <button class='cancel' (click)='visible.emit(false)'>Отмета</button>
+  </div>
+
+</form>

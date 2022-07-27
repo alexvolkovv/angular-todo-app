@@ -1,0 +1,67 @@
+.todo__item {
+  display: block;
+  margin-bottom: 20px;
+  &-wrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+    opacity: 0;
+    &:hover svg {
+      path {
+        fill: darken(#ccc, 10%);
+      }
+    }
+    &:active svg {
+      path {
+        fill: darken(#ccc, 50%);
+      }
+    }
+    svg {
+      width:15px;
+      height: 15px;
+    }
+  }
+  &:hover button {
+    opacity: 1;
+  }
+}
+
+.item__content {
+  text-align: left;
+  display: flex;
+}
+
+
+.item__checked {
+  input {
+    display: none;
+  }
+  .custom__checkbox {
+    transition: 0.2s all;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    &:hover {
+      background-color: #ccc;
+    }
+    cursor: pointer;
+  }
+  input:checked + .custom__checkbox {
+    background-color: #4DD599;
+    border: 2px solid #4DD599;
+  }
+}

@@ -1,0 +1,7 @@
+<div>
+  <todo *ngFor='let list of lists' [tasks]='(tasks | filterTodo: list)' [list]='list'></todo>
+
+  <h1 *ngIf='!lists.length' class='no-tasks'>
+    Задачи отсутствуют
+  </h1>
+</div>

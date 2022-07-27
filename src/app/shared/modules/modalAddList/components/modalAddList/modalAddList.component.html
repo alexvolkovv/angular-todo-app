@@ -1,0 +1,14 @@
+<form #modal class='modal' (ngSubmit)='addList()' [formGroup]='form'>
+  <div class='modal__input'>
+    <input #input type='text' placeholder='Название папки...' formControlName='listName'>
+  </div>
+  <div class='modal__colors'>
+    <ul>
+      <li (click)='selectColor(idx)' *ngFor='let color of colors; let idx = index' [style]='{background: color.hex}' [ngClass]='{active: idx === selectedColor}'>
+      </li>
+    </ul>
+  </div>
+  <button type='submit' class='modal__button'>
+    Добавить
+  </button>
+</form>

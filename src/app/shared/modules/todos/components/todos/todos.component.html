@@ -1,0 +1,14 @@
+<div class='todos'>
+  <div class='todos__title' [style]='{color: list?.hex}'>
+    {{list?.name}}
+  </div>
+  <div class='todos__items'>
+    <todo-item *ngFor='let task of tasks' [task]="task"></todo-item>
+    <button #showModal *ngIf='!modalVisible' class='todos__add' (click)='toggleModal()'>+ Добавить задачу</button>
+
+    <ng-container *ngIf='modalVisible'>
+      <todo-modal-add [showModalButton]='showModalBtn' (newTaskName)='addTask($event)' (visible)='setVisible($event)'></todo-modal-add>
+    </ng-container>
+  </div>
+    <h2 *ngIf='!tasks.length' class='no-tasks'>Задачи отсутствуют</h2>
+</div>

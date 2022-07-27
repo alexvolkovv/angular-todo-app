@@ -1,0 +1,35 @@
+.lists {
+  padding: 50px 20px;
+  background-color: #E5E5E5;
+  width: 20vw;
+  height: 100vh;
+  &__add {
+    button {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px 15px;
+      color: #868686;
+      &:hover {
+        color: darken(#767676, 10%);
+        svg {
+          path {
+            stroke: darken(#767676, 10%);
+          }
+        }
+      }
+      &:active {
+        color: darken(#767676, 20%);
+        svg {
+          path {
+            stroke: darken(#767676, 20%);
+          }
+        }
+      }
+    }
+  }
+}
+
+
